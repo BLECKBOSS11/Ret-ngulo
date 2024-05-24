@@ -1,0 +1,42 @@
+// Interface para desenhar um retângulo com texto
+interface RectangleDrawer {
+    void drawRectangle(String text);
+}
+
+// Implementação para desenhar um retângulo com bordas arredondadas
+class RoundedRectangleDrawer implements RectangleDrawer {
+    public void drawRectangle(String text) {
+        System.out.println("Desenhando retângulo com bordas arredondadas: " + text);
+    }
+}
+
+// Implementação para desenhar um retângulo com linhas duplas
+class DoubleLineRectangleDrawer implements RectangleDrawer {
+    public void drawRectangle(String text) {
+        System.out.println("Desenhando retângulo com linhas duplas: " + text);
+    }
+}
+
+// Implementação para desenhar um retângulo com arte ASCII
+class AsciiArtRectangleDrawer implements RectangleDrawer {
+    public void drawRectangle(String text) {
+        System.out.println("Desenhando retângulo com arte ASCII: " + text);
+    }
+}
+
+// Exemplo de uso
+public class Main {
+    public static void main(String[] args) {
+        // Cria um retângulo com bordas arredondadas
+        RectangleDrawer roundedDrawer = new RoundedRectangleDrawer();
+        roundedDrawer.drawRectangle("Hello, rounded rectangle!");
+
+        // Cria um retângulo com linhas duplas
+        RectangleDrawer doubleLineDrawer = new DoubleLineRectangleDrawer();
+        doubleLineDrawer.drawRectangle("Hello, double line rectangle!");
+
+        // Cria um retângulo com arte ASCII
+        RectangleDrawer asciiArtDrawer = new AsciiArtRectangleDrawer();
+        asciiArtDrawer.drawRectangle("Hello, ASCII art rectangle!");
+    }
+}
